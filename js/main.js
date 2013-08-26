@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", function(){
         //Object properties contain array with the form label and input value.
         getSelectedCheckedBoxes(); 
         var itemList            = {};
-            itemList.fleaRx     = ["Flea Rx:", getElements('select').value];
+            itemList.fleaRx     = ["Flea Rx:", getElements('fleaRx').value];
             itemList.petname    = ["Pet Name:", getElements('petname').value];
             itemList.petage     = ["Pet Age:", getElements('petage').value];
             itemList.pettype    = ["Pet Type:", getElements('pettype').value];
@@ -167,18 +167,18 @@ window.addEventListener("DOMContentLoaded", function(){
         getElements('petage').value = itemList.petage[1];
         getElements('pettype').value = itemList.pettype[1];
 
-        if(itemList.flea[1] == "Yes") {
+        if(itemList.flea[1] == "Flea Medication") {
             getElements('flea').setAttribute("checked", "checked");
         }
         
         getElements('select').value = itemList.fleaRx[1];
         
-        if (itemList.heartworm[1] == "Yes") {
+        if (itemList.heartworm[1] == "Heartworm Medication") {
             getElements('heartworm').setAttribute("checked", "checked");
             
         }
         
-        if (itemList.other[1] == "Yes") {
+        if (itemList.other[1] == "Other Meds") {
             getElements('other').setAttribute("checked", "checked");
         }
                 
