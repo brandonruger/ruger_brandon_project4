@@ -74,18 +74,18 @@ window.addEventListener("DOMContentLoaded", function(){
             var generateId = Math.floor(Math.random()*100000001);
         }else{
             //Set the id to the existing key we're editing, so it will save over the data.
-            id = key;
+            generateId = key;
         }
         
         //Gather up all our form field values and store in an object.
         //Object properties contain array with the form label and input value.
         getSelectedCheckedBoxes(); 
         var itemList            = {};
-            itemList.fleaRx     = ["Flea Rx:", getElements('fleaRx').value];
             itemList.petname    = ["Pet Name:", getElements('petname').value];
             itemList.petage     = ["Pet Age:", getElements('petage').value];
             itemList.pettype    = ["Pet Type:", getElements('pettype').value];
             itemList.flea       = ["Flea:", fleaValue];
+            itemList.fleaRx     = ["Flea Rx:", getElements('fleaRx').value];
             itemList.heartworm  = ["Heartworm:", heartwormValue];
             itemList.other      = ["Other:", otherValue];
             itemList.date       = ["Date:", getElements('date').value];
@@ -99,6 +99,11 @@ window.addEventListener("DOMContentLoaded", function(){
     
     function getDataFromStorage() {
         toHideForm("on");
+        if (localStorage.length === 0) {
+            alert("There is no data in Local Storage so default data was added.");
+            getJsonData();
+        }
+        
         //Write Data from local storage to the browser
         var createDiv = document.createElement('div');
         createDiv.setAttribute("id", "items");
@@ -152,6 +157,14 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.addEventListener("click", deleteReminder);
         deleteLink.innerHTML = deleteText;
         newLinksLi.appendChild(deleteLink);
+    }
+    //Auto populate Local Storage with JSON data
+    function getJsonData() {
+        //Store JSON Object into Local Storage.
+        for (var n in json) {
+            var id = Math.floor(Math.random()*10000001);
+            localStorage.setItem(id, JSON.stringify(json[n]));
+        }
     }
     
     function editReminder() {

@@ -22,5 +22,5 @@ var json = {
         "date": ["Date:", "9/15/2013"],
         "range": ["Range:", "3"],
         "note": ["Note:", "Reminder #2"]
-       
+    }   
 }
