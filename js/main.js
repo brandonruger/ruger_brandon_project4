@@ -121,6 +121,7 @@ window.addEventListener("DOMContentLoaded", function(){
             var findObject = JSON.parse(dataValue);
             var subList = document.createElement('ul');
             createListItem.appendChild(subList);
+            getIcon(findObject.fleaRx[1], subList);
             for (var n in findObject) {
                 var makeSublist = document.createElement('li');
                 subList.appendChild(makeSublist);
@@ -132,6 +133,15 @@ window.addEventListener("DOMContentLoaded", function(){
             
         }
         
+    }
+    
+    //Get the Image for the right select category
+    function getIcon(fleaType, subList) {
+        var imageList = document.createElement('li');
+        subList.appendChild(imageList);
+        var createImg = document.createElement('img');
+        var setImgSrc = createImg.setAttribute("src", "/images/" + fleaType + ".png");
+        imageList.appendChild(createImg);
     }
     
     //Function to create edit/delete links for each stored item when displayed.
@@ -294,7 +304,7 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     
     //Variable Defaults
-    var fleaMedication = ["--Type of Flea Medication--", "Topical", "Oral", "Spray-On"];
+    var fleaMedication = ["--Type of Flea Medication--", "Topical", "Oral", "Sprayon"];
     var fleaCheckBox;
     var fleaValue;
     var heartwormValue;
