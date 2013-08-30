@@ -1,5 +1,5 @@
 /* Brandon Ruger
- * Project 3
+ * Project 4
  * VFW 1308 */
 
 window.addEventListener("DOMContentLoaded", function(){
@@ -140,7 +140,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var imageList = document.createElement('li');
         subList.appendChild(imageList);
         var createImg = document.createElement('img');
-        var setImgSrc = createImg.setAttribute("src", "/images/" + fleaType + ".png");
+        var setImgSrc = createImg.setAttribute("src", "img/" + fleaType + ".png");
         imageList.appendChild(createImg);
     }
     
@@ -168,6 +168,7 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.innerHTML = deleteText;
         newLinksLi.appendChild(deleteLink);
     }
+    
     //Auto populate Local Storage with JSON data
     function getJsonData() {
         //Store JSON Object into Local Storage.
@@ -229,7 +230,7 @@ window.addEventListener("DOMContentLoaded", function(){
             alert("Reminder was deleted!");
             window.location.reload();
         }else{
-            alert("Reminder was NOT delelted.")
+            alert("Reminder was NOT deleted.")
         }
     }
     

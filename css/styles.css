@@ -1,21 +1,22 @@
 /* Brandon Ruger
- * Project 3
+ * Project 4
  * VFW 1308 */
 
 body{
-    background-color: gray;
+    background-color: #202074;
     
 }
 
 h1 {
     font-family: "Times New Roman";
     color: red;
-    font: 36px "Times New Roman";
+    font: 28px "Times New Roman";
     text-align: center;
     text-transform: uppercase;
-    margin: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #000;
+    border: 2px solid white;
     background-color:  blue;
     text-decoration: blink;
     
@@ -25,16 +26,17 @@ legend {
     font: 20px "Times New Roman";
     color: white;
     text-align: center;
-    border: 1px solid #000;
+    border: 2px solid white;
     margin-top: 10px;
     padding: 5px;
-    background-color: blue;
+    background-color: #008aff;
     letter-spacing: 0.5em;
     
 }
 
 li {
-    font: 14px "Arial";
+    font: 14px "Tahoma";
+    color: white;
 }
 
 input {
@@ -44,6 +46,8 @@ input {
 }
 
 a{
+    font: 12px "Arial";
+    color: #008aff;
     text-align: center;
        
 }
@@ -67,5 +71,14 @@ option {
     margin-top: 10px;
     background-color: red;
     font: 18px "Arial";
+    color: white;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+label {
     color: white;
 }

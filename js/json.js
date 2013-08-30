@@ -1,3 +1,7 @@
+/* Brandon Ruger
+ * Project 4
+ * VFW 1308 */
+
 var json = {
     "reminder1": {
         "petname": ["Pet Name:", "Ryder"],
@@ -16,7 +20,7 @@ var json = {
         "petage": ["Pet Age:", "1"],
         "pettype": ["Pet Type:", "dog"],
         "flea": ["Flea:", "No"],
-        "fleaRx": ["Flea Rx:", "--Type of Flea Medication--"],
+        "fleaRx": ["Flea Rx:", "Sprayon"],
         "heartworm": ["Heartworm:", "Heartworm Medication"],
         "other": ["Other:", "No"],
         "date": ["Date:", "9/15/2013"],
